@@ -36,7 +36,7 @@ export const Contact = () => {
     }
 
     try {
-      let response = await fetch("http://localhost:5000/contact", {
+      let response = await fetch("https://portfolio-6ai2.onrender.com/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
