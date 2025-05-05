@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import githubicon from "../assets/img/github-icon.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/gitHub-icon.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import x from "../assets/img/x-icon.svg";
 import { HashLink } from "react-router-hash-link";
 
 export const NavBar = () => {
@@ -67,10 +67,10 @@ export const NavBar = () => {
                 <img src={navIcon1} alt="" />
               </a>
               <a href="https://github.com/PiyushVIT346">
-                <img src={navIcon2} alt="" />
+                <img src={githubicon} alt="" />
               </a>
-              <a href="#">
-                <img src={navIcon3} alt="" />
+              <a href="https://x.com/PiyushSing3355">
+                <img src={x} alt="" />
               </a>
             </div>
             <HashLink to="#connect">
