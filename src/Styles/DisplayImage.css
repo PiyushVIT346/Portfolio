@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* Luxury Container */
+.luxury-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  perspective: 1000px;
+  background-image: url('../assets/img/st2.gif');
+  background-size: cover;
+  background-position: center;
+  animation: animateBackground 10s infinite;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+/* Text Banner */
+.luxury-text {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  z-index: 10;
+}
+
+.luxury-text h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.luxury-text p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Orbit Container */
+.luxury-orbit {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  top: 25%;
+  left: 30%;
+  transform: translateX(-50%);
+  animation: rotate 20s linear infinite;
+  z-index: 5;
+}
+
+.luxury-orbit-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px;
+  transform-origin: center center;
+  animation: orbitItem 2s ease-out infinite alternate;
+}
+
+.luxury-orbit-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+
+}
+
+/* Orbit Item Position */
+.luxury-orbit-item:nth-child(1) {
+  transform: rotate(0deg) translateX(150px) rotate(0deg);
+}
+
+.luxury-orbit-item:nth-child(2) {
+  transform: rotate(45deg) translateX(150px) rotate(-45deg);
+}
+
+.luxury-orbit-item:nth-child(3) {
+  transform: rotate(90deg) translateX(150px) rotate(-90deg);
+}
+
+.luxury-orbit-item:nth-child(4) {
+  transform: rotate(135deg) translateX(150px) rotate(-135deg);
+}
+
+.luxury-orbit-item:nth-child(5) {
+  transform: rotate(180deg) translateX(150px) rotate(-180deg);
+}
+
+.luxury-orbit-item:nth-child(6) {
+  transform: rotate(225deg) translateX(150px) rotate(-225deg);
+}
+
+.luxury-orbit-item:nth-child(7) {
+  transform: rotate(270deg) translateX(150px) rotate(-270deg);
+}
+
+.luxury-orbit-item:nth-child(8) {
+  transform: rotate(315deg) translateX(150px) rotate(-315deg);
+}
+
+/* 3D Character Styling */
+.luxury-3d-character {
+  position: absolute;
+  top: 47%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease-out;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.luxury-3d-character img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Animation for orbit rotation */
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+/* Keyframes for animating the background */
+@keyframes animateBackground {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Education Section */
+.luxury-education {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+  width: 100%;
+  justify-content: center;
+}
+
+.luxury-education-line {
+  width: 3px;
+  height: 100px;
+  background-color: white;
+  margin-right: 10px;
+  animation: growLine 1s ease-out;
+}
+
+.luxury-education-box {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e3c72;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  width: 300px;
+}
+
+.luxury-education-box h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #2a5298;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.luxury-education-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.luxury-education-box ul li {
+  margin: 5px 0;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* Experience Section */
+.luxury-experience {
+  display: flex;
+  align-items: center;
+  animation: fadeIn 1s ease-out;
+  animation-delay: 0.3s;
+  width: 100%;
+  justify-content: center;
+}
+
+.luxury-experience-line {
+  width: 3px;
+  height: 100px;
+  background-color: white;
+  margin-right: 10px;
+  animation: growLine 1s ease-out;
+}
+
+.luxury-experience-box {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e3c72;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  width: 300px;
+}
+
+.luxury-experience-box h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #2a5298;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.luxury-experience-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.luxury-experience-box ul li {
+  margin: 5px 0;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* Animation for the line */
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100px;
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Next section styling */
+.next-section {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  min-height: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .luxury-container {
+    padding-bottom: 100px;
+  }
+  
+  .luxury-text {
+    padding: 20px 20px 0;
+  }
+  
+  .luxury-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .luxury-text p {
+    font-size: 1rem;
+  }
+  
+  .luxury-orbit {
+    width: 200px;
+    height: 200px;
+    margin: 60px auto 40px;
+  }
+
+  .luxury-orbit-item {
+    width: 40px;
+    height: 40px;
+    margin: -20px;
+  }
+  
+  .luxury-orbit-item:nth-child(n) {
+    transform: rotate(calc(45deg * var(--i))) translateX(100px) rotate(calc(-45deg * var(--i)));
+  }
+
+  .luxury-3d-character {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .luxury-education, .luxury-experience {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .luxury-education-box, .luxury-experience-box {
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .luxury-education-box h3, .luxury-experience-box h3 {
+    font-size: 16px;
+  }
+  
+  .luxury-education-box ul li, .luxury-experience-box ul li {
+    font-size: 14px;
+  }
+  
+  .luxury-education-line, .luxury-experience-line {
+    height: 2px;
+    width: 100px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .luxury-container {
+    padding-bottom: 150px;
+  }
+  
+  .luxury-text {
+    padding: 10px 15px 0;
+  }
+
+  .luxury-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .luxury-text p {
+    font-size: 0.9rem;
+  }
+
+  .luxury-orbit {
+    width: 150px;
+    height: 150px;
+    margin: 40px auto 30px;
+  }
+
+  .luxury-orbit-item {
+    width: 30px;
+    height: 30px;
+    margin: -15px;
+  }
+  
+  .luxury-orbit-item:nth-child(n) {
+    transform: rotate(calc(45deg * var(--i))) translateX(75px) rotate(calc(-45deg * var(--i)));
+  }
+
+  .luxury-3d-character {
+    width: 80px;
+    height: 80px;
+    top: 25%;
+  }
+  
+  @keyframes growLine {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100px;
+    }
+  }
+}

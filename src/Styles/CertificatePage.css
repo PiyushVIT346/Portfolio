@@ -1,0 +1,108 @@
+/* Certificate Page Container */
+.certificate-page-container {
+    padding: 2rem;
+    text-align: center;
+    background-image:url('../assets/img/red-brick-wall.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Title Styling */
+  .certificate-page-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    color: yellow;
+    -webkit-text-stroke: 2px black; /* Adds a black border around the text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: Adds a shadow effect for better visibility */
+}
+
+  
+  /* Grid Layout */
+  .certificate-page-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  /* Certificate Card */
+  .certificate-card {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 90%;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .certificate-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Certificate Image */
+  /* Certificate Image */
+.certificate-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 17px solid transparent; /* Transparent base for the border image */
+  border-image: url('../assets/img/wood2.jpg') 30 stretch; /* Apply the wood texture as a border */
+}
+
+  
+  /* Certificate Overlay (hidden initially, shown on hover) */
+  .certificate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .certificate-card:hover .certificate-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Certificate Name */
+  .certificate-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  
+  /* Certificate Issuer */
+  .certificate-issuer {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #ccc;
+  }
+  
+  /* Certificate Description */
+  .certificate-description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ddd;
+  }
+  

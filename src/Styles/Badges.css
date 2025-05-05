@@ -1,0 +1,76 @@
+/* Badges.css */
+
+.badges-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.badge-section {
+    margin-bottom: 40px;
+    width: 80%;
+    text-align: center;
+    
+}
+
+.badge-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: green;
+}
+
+.badge-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.badge-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color:white
+}
+
+.badge-item p {
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .badge-section h3 {
+        font-size: 20px;
+    }
+
+    .badge-list {
+        gap: 15px;
+    }
+
+    .badge-item {
+        width: 100px;
+    }
+
+    .badge-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .badge-item p {
+        font-size: 12px;
+    }
+}
