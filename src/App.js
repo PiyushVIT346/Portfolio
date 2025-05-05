@@ -6,7 +6,7 @@ import { Banner } from "./components/Banner";
 import { Skills } from "./components/Skills";
 import { CertificatePage } from './components/CertificateDisplay';
 import { Projects } from "./components/Projects";
-import { Contact2 } from "./components/Contact2";
+import { Contact } from "./components/Contact";
 import { Footer } from './components/Footer';
 import { Badges } from './components/Badges';
 import { DisplayImage } from './components/DisplayImage';
@@ -24,7 +24,7 @@ function App() {
       <Badges />
       <Experience />
       <Projects />
-      <Contact2 />
+      <Contact />
       <Footer />
     </div>
   );

@@ -1,55 +1,48 @@
-const express = require("express");
-const router = express.Router();
-const cors = require("cors");
-const nodemailer = require("nodemailer");
+const express = require('express');
+const cors = require('cors');
+const nodemailer = require('nodemailer');
 
-// Server setup
 const app = express();
+const PORT = 5000;
+
 app.use(cors());
 app.use(express.json());
-app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
 
-// Configure nodemailer
-const contactEmail = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: "piyushsingh50105@gmail.com", // Replace with your Gmail address
-        pass: "p1i2y3u4s5h6", // Replace with your Gmail app password
-    },
+// Setup your transporter (Gmail example)
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'piyushsingh50105@gmail.com', // Your email
+    pass: 'vvmn ezab csni jtlr'      // ⚠️ Use App Password, NOT your Gmail password
+  }
 });
 
-// Verify email transporter
-contactEmail.verify((error) => {
+app.post('/contact', (req, res) => {
+  const { firstName, lastName, email, phone, message } = req.body;
+
+  const mailOptions = {
+    from: email,
+    to: 'piyushsingh50105@gmail.com',
+    subject: 'New Contact Form Submission',
+    text: `
+      Name: ${firstName} ${lastName}
+      Email: ${email}
+      Phone: ${phone}
+      Message: ${message}
+    `
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-        console.log("Error verifying email transporter:", error);
+      console.error('Error sending mail:', error);
+      return res.json({ code: 500, message: 'Failed to send email' });
     } else {
-        console.log("Ready to send emails");
+      console.log('Email sent:', info.response);
+      return res.json({ code: 200, message: 'Email sent successfully' });
     }
+  });
 });
 
-// Contact route
-router.post("/contact", (req, res) => {
-    const { firstName, lastName, email, message, phone } = req.body;
-
-    const mail = {
-        from: `${firstName} ${lastName} <${email}>`,
-        to: "piyushsingh50105@gmail.com", // Replace with the recipient's email
-        subject: "Contact Form Submission - Portfolio",
-        html: `
-            <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone}</p>
-            <p><strong>Message:</strong> ${message}</p>
-        `,
-    };
-
-    contactEmail.sendMail(mail, (error) => {
-        if (error) {
-            console.error("Error sending email:", error);
-            res.status(500).json({ code: 500, status: "Error sending message" });
-        } else {
-            res.status(200).json({ code: 200, status: "Message Sent" });
-        }
-    });
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
