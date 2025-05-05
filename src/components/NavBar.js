@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
+import navIcon2 from "../assets/img/gitHub-icon.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import { HashLink } from "react-router-hash-link";
 
@@ -66,7 +66,7 @@ export const NavBar = () => {
               <a href="https://www.linkedin.com/in/piyush-singh-328302289/">
                 <img src={navIcon1} alt="" />
               </a>
-              <a href="#">
+              <a href="https://github.com/PiyushVIT346">
                 <img src={navIcon2} alt="" />
               </a>
               <a href="#">
