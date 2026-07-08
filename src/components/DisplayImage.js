@@ -83,7 +83,10 @@ export const DisplayImage = () => {
             <div className="luxury-experience-box">
               <h3>Experience</h3>
               <ul>
-                <li>Internship at LearnFlu 3-month internship</li>
+                <li>Internship at LearnFlu as AI Intern 3-month internship</li>
+                <li>Internship at UptoSkills as DL Intern and promoted as Captain</li>
+                <li>Research Fellowship at CONCPT</li>
+                <li>Project Internship at Decodelabs as GenAI role</li>
                 <li>FreeLancing Club Core member VIT Bhopal</li>
                 <li>Member in Microsoft Club VIT Bhopal</li>
               </ul>

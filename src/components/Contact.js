@@ -36,24 +36,34 @@ export const Contact = () => {
     }
 
     try {
-      let response = await fetch("http://localhost:5000/contact", {
+      // Append the access key to your form data
+      const payload = {
+        ...formDetails,
+        access_key: "3a8095f7-8e75-47a6-8e4c-1589ade0512f"
+      };
+
+      // Send to Web3Forms API instead of localhost
+      let response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json;charset=utf-8",
+          "Content-Type": "application/json",
+          "Accept": "application/json"
         },
-        body: JSON.stringify(formDetails),
+        body: JSON.stringify(payload),
       });
       
       let result = await response.json();
       setButtonText("Send");
       setFormDetails(formInitialDetails);
       
-      if (result.code === 200) {
-        setStatus({ success: true, message: 'Message sent successfully' });
+      // Web3Forms uses result.success to indicate a 200 OK
+      if (result.success) {
+        setStatus({ success: true, message: 'Message sent successfully!' });
       } else {
         setStatus({ success: false, message: 'Something went wrong, please try again later.' });
       }
     } catch (error) {
+      console.error(error);
       setButtonText("Send");
       setStatus({ success: false, message: 'There was an error sending your message. Please try again later.' });
     }

@@ -73,6 +73,18 @@ export const NavBar = () => {
                 <img src={x} alt="" />
               </a>
             </div>
+            
+            {/* Download Resume Button */}
+            <a 
+              href="/Piyush_Singh_Resume.pdf" 
+              download="Piyush_Singh_Resume.pdf"
+              style={{ textDecoration: 'none' }}
+            >
+              <button className="vvd" style={{ marginRight: '15px' }}>
+                <span>Resume</span>
+              </button>
+            </a>
+
             <HashLink to="#connect">
               <button className="vvd">
                 <span>Let’s Connect</span>

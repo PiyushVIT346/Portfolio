@@ -35,6 +35,8 @@
     width: 120px;
 }
 
+
+
 .badge-img {
     width: 80px;
     height: 80px;
@@ -72,5 +74,78 @@
 
     .badge-item p {
         font-size: 12px;
+    }
+}
+
+
+/* --- NEW STYLES FOR CODEFORCES CARD --- */
+
+.cf-card {
+    display: flex;
+    align-items: center;
+    background-color: rgba(17, 17, 17, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #1f8b4c; /* Codeforces green aesthetic */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.cf-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(31, 139, 76, 0.3);
+}
+
+.cf-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
+.cf-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.cf-info h4 {
+    color: white;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.cf-info p {
+    color: #ccc;
+    font-size: 14px;
+    margin: 3px 0;
+    text-transform: capitalize;
+}
+
+.cf-highlight {
+    color: #FFD700; /* Gold color for rating and rank */
+    font-weight: bold;
+}
+
+.loading-text {
+    color: white;
+    font-size: 16px;
+}
+
+/* Responsive adjustments for the CF card */
+@media (max-width: 768px) {
+    .cf-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .cf-info {
+        text-align: center;
     }
 }
