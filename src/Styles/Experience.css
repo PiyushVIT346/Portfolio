@@ -57,6 +57,36 @@
   text-shadow: 0 0 10px rgba(42, 82, 152, 0.7);
 }
 
+/* --- NEW STYLES FOR LOGO --- */
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between logo and title */
+  margin-bottom: 0.75rem;
+}
+
+.company-logo {
+  width: 90px; /* Adjust width as needed */
+  height: 90px; /* Adjust height as needed */
+  object-fit: contain; /* Ensures the whole logo is visible without distortion */
+  border-radius: 8px; /* Slightly rounds the edges of the logo background */
+  background-color: rgba(255, 255, 255, 0.9); /* Adds a white background in case logos are dark */
+  padding: 5px; /* Adds space inside the logo background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Update the existing h3 rule to remove its bottom margin, 
+   since the experience-header now handles the spacing */
+.experience-content h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 0; /* Changed from 0.75rem */
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+
 /* List container for experiences */
 .experience-list {
   position: relative;

@@ -1,25 +1,57 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../Styles/Experience.css';
+import concpt from '../assets/img/concpt.jpg';
+import decodelabs from '../assets/img/decodelabs.jpg';
+import learnflu from '../assets/img/learnflu.png';
+import freelancing from '../assets/img/freelancing.jpg';
+import microsoft from '../assets/img/microsoft.jpg';
+import uptoskills from '../assets/img/uptoskills.webp';
 
 const experiences = [
+
   {
-    title: 'Volunteered and member of Microsoft club',
-    company: 'Microsoft Club VIT Bhopal',
-    duration: '2023 - 2024',
-    description:'Acquired valuable experience in collaborative team tasks, event organization, and efficient workflow management, enhancing leadership, communication, and problem-solving skills in dynamic environments.',
+    title: 'Internship',
+    company: 'UptoSkills',
+    duration: 'June 2026 - August 2026',
+    description:'Joined as a Deep learning Intern, contributed to project for detecting and classifying car manufacturing company in real-life Traffic data using YOLO model. Later Prmoted as Captain of the team and communicate with management and supervise the team.',
+    logo: uptoskills,
+  },
+  {
+    title: 'Research Fellowship',
+    company: 'CONCPT',
+    duration:'July 2026 - December 2026',
+    description:'Working as Research Fellow in CONCPT, focusing on Generative AI and its applications in various domains. Engaged in research projects, contributing to the development of innovative solutions and advancements in the field of AI.',
+    logo: concpt,
+  },
+  {
+    title: 'Generative AI Project Internship',
+    company: 'Decodelabs',
+    duration: 'June 2026 - July 2026',
+    description:'Completed 3 Generative AI projects related to handling persistant storage, RAG and multimodal tasks. Also created project for generating post messages for LinkedIn, Instagram and Email.',
+    logo: decodelabs,
   },
   {
     title: 'Internship and Training',
     company: 'LearnFlu',
     duration: '2023 - 2024',
     description:'Gained practical experience in AI and ML programming using Python, focusing on advanced statistical methods and techniques to develop innovative solutions across various domains.',
+    logo: learnflu,
   },
   {
     title: 'Core member of FreeLancing Club',
     company: 'FreeLancing Club VIT Bhopal',
     duration: '2024 - 2025',
     description:'Contributed to the FreeLancing Club at VIT Bhopal, gaining hands-on experience in project management, client communication, and teamwork while enhancing my skills in freelancing and entrepreneurship.',
+    logo: freelancing,
   },
+    {
+    title: 'Volunteered and member of Microsoft club',
+    company: 'Microsoft Club VIT Bhopal',
+    duration: '2023 - 2024',
+    description:'Acquired valuable experience in collaborative team tasks, event organization, and efficient workflow management, enhancing leadership, communication, and problem-solving skills in dynamic environments.',
+    logo: microsoft,
+  },
+  
 ];
 
 export const Experience = () => {
@@ -128,11 +160,21 @@ export const Experience = () => {
       </div>
       
       <h2 className="experience-title">My Experience</h2>
-      <div className="experience-list">
+<div className="experience-list">
         {experiences.map((exp, index) => (
           <div key={index} className="experience-item">
             <div className="experience-content">
-              <h3>{exp.title}</h3>
+              {/* Added a header div to align the logo and title side-by-side */}
+              <div className="experience-header">
+                {exp.logo && (
+                  <img 
+                    src={exp.logo} 
+                    alt={`${exp.company} logo`} 
+                    className="company-logo" 
+                  />
+                )}
+                <h3>{exp.title}</h3>
+              </div>
               <p><strong>Company / Organisation:</strong> {exp.company}</p>
               <p><strong>Duration:</strong> {exp.duration}</p>
               <p><strong>Description:</strong> {exp.description}</p>

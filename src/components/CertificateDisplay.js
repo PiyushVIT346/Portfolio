@@ -15,9 +15,46 @@ import certificate10 from '../assets/img/software.jpg';
 import certificate11 from '../assets/img/hackCertificate.jpg';
 import certificate12 from '../assets/img/OllamaCertificate.jpg';
 import certificate13 from '../assets/img/freeLancingClub.jpg';
+import aws from '../assets/img/aws.jpg';
+import az from '../assets/img/az.jpg';
+import learnflu from '../assets/img/LearFluCert.jpg';
+import nptel from '../assets/img/NPTEL.jpg';
+import ibm from '../assets/img/ibm.jpg';
+import uptoskill_offer_letter from '../assets/img/uptoskill_offer.jpg';
+import decodelabs_offer from '../assets/img/decodelabs_offer.jpg';
 
 export const CertificatePage = () => {
   const certificates = [
+    {
+      title: 'AWS Certified Cloud Practitioner',
+      issuer: 'Amazon Web Services',
+      image: aws,
+      description: 'Learned about cloud computing and AWS services.',
+    },
+    {
+      title: 'Microsoft Azure Data Fundamentals',
+      issuer: 'Microsoft',
+      image: az,
+      description: 'Learned about cloud computing and Azure services.',
+    },
+    {
+      title: 'LearnFlu Internship',
+      issuer: 'LearnFlu',
+      image: learnflu,
+      description: 'Completed Learnflu internship as AIML intern role.',
+    },
+    {
+      title: 'NPTEL Course',
+      issuer: 'NPTEL',
+      image: nptel,
+      description: 'Completed NPTEL IOT course',
+    },
+    {
+      title: 'GenAI using IBM Watson',
+      issuer: 'IBM',
+      image: ibm,
+      description: 'Learned about GenAI using IBM Watson.',
+    },
     {
       title: 'Python Essential',
       issuer: 'Vityarthi',
@@ -103,6 +140,18 @@ export const CertificatePage = () => {
       image: certificate13,
       description:
         'Become the core member of the FreeLancing Club at VIT Bhopal.',
+    },
+    {
+      title: 'UptoSkills offer letter',
+      issuer: 'UptoSkills',
+      image: uptoskill_offer_letter,
+      description:'Received an offer letter from UptoSkills.',
+    },
+    {
+      title: 'Decodelabs offer letter',
+      issuer: 'Decodelabs',
+      image: decodelabs_offer,
+      description:'Received an offer letter from Decodelabs.',
     },
   ];
 
